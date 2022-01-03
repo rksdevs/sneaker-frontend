@@ -1,10 +1,9 @@
 import { Box } from "@mui/system";
 import Checkbox from "@mui/material/Checkbox";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import { Paper, Button, TextField, Avatar, Typography } from "@mui/material";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
-const Register = () => {
+const SigninForm = () => {
   return (
     <form>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -23,7 +22,7 @@ const Register = () => {
             >
               <LockOutlinedIcon />
             </Avatar>
-            Register
+            Sign In
           </Typography>
           <Box sx={{ mb: 4, ml: 18, mr: 18, mt: 4 }}>
             <TextField
@@ -37,45 +36,35 @@ const Register = () => {
           </Box>
           <Box sx={{ mb: 4, ml: 18, mr: 18 }}>
             <TextField
-              id="name"
-              label="Name"
-              variant="outlined"
-              required
-              fullWidth
-            />
-          </Box>
-          <Box sx={{ mb: 4, ml: 18, mr: 18 }}>
-            <TextField
               id="password"
               label="Password"
               variant="outlined"
               required
               fullWidth
             />
-          </Box>
-          <Box sx={{ mb: 4, ml: 18, mr: 18 }}>
-            <TextField
-              id="phoneNumber"
-              label="Phone Number"
-              variant="outlined"
-              fullWidth
-            />
-          </Box>
-
-          <Box sx={{ mb: 4 }}>
-            <FormControlLabel
-              control={<Checkbox defaultChecked />}
-              label="I agree to the terms & conditions"
-            />
+            <Box sx={{ mb: 4, mt: 4, display: "flex", flexDirection: "row" }}>
+              <Typography variant="body2" sx={{ mr: 1, ml: 1 }}>
+                <Checkbox defaultChecked size="small" /> Remember me
+              </Typography>
+              <Typography variant="body2" sx={{ mr: 1, ml: 1 }}>
+                <Button variant="outlined" size="small">
+                  Forgot Password
+                </Button>
+              </Typography>
+            </Box>
           </Box>
 
           <Box sx={{ mb: 4, ml: 6, mr: 6 }}>
-            <Button variant="contained">Register</Button>
+            <Button variant="contained">Sign In</Button>
           </Box>
+          <Typography variant="body1" sx={{ alignItems: "initial" }}>
+            By clicking 'Sign In' you agree to our website Creators Club Terms &
+            Conditions, adidas Privacy Notice and Terms & Conditions.
+          </Typography>
         </Paper>
       </Box>
     </form>
   );
 };
 
-export default Register;
+export default SigninForm;
