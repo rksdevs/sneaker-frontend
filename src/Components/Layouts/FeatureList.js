@@ -8,8 +8,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import StarIcon from "@mui/icons-material/Star";
 import { pink } from "@mui/material/colors";
+import { useNavigate } from "react-router-dom";
 
 const FeatureList = (props) => {
+  const navigate = useNavigate();
   return (
     <div>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -80,7 +82,11 @@ const FeatureList = (props) => {
               display: props.noButton ? "none" : "inherit",
             }}
           >
-            <Button variant="contained" size="large">
+            <Button
+              variant="contained"
+              size="large"
+              onClick={() => navigate("/register")}
+            >
               Register Now
             </Button>
           </Box>

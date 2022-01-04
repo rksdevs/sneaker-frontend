@@ -5,6 +5,8 @@ import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import { Paper } from "@mui/material";
 import FeatureList from "../Components/Layouts/FeatureList.js";
+import FooterBottom from "../Components/Layouts/FooterBottom.js";
+import FooterTop from "../Components/Layouts/FooterTop.js";
 
 const Register = () => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -29,6 +31,14 @@ const Register = () => {
             </Item>
           </Grid>
         </Grid>
+      </Box>
+      <Box>
+        <Box>
+          <FooterTop />
+        </Box>
+        <Box>
+          <FooterBottom />
+        </Box>
       </Box>
     </div>
   );

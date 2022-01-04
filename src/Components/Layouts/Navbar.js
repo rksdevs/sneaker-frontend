@@ -76,7 +76,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 //Search Bar Ends
 
-const pages = ["Men's", "Women's", "Kids"];
+const pages = ["Men's", "Women's", "Kids", "Brands", "New Arrivals"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
